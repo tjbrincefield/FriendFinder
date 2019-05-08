@@ -17,7 +17,6 @@ module.exports = function(app) {
     }
   });
 
-
   app.post("/api/clear", function(req, res) {
     friendData.length = 0;
     res.json({ ok: true });
