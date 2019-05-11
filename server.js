@@ -4,7 +4,7 @@ var path = require("path");
 
 var app = express();
 
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -13,6 +13,7 @@ app.use(express.json());
 // Use the express.static middleware to serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
+
 // var mysql = require("mysql");
 
 // var connection = mysql.createConnection({
@@ -20,7 +21,7 @@ app.use(express.static("public"));
 //   port: 3306,
 //   user: "root",
 //   password: "Spring21",
-//   database: "wishes_db"
+// //   database: "wishes_db"
 // });
 
 connection.connect(function(err) {
@@ -68,3 +69,4 @@ app.listen(PORT, function() {
   // Log (server-side) when our server has started
   console.log("Server listening on: http://localhost:" + PORT);
 });
+
